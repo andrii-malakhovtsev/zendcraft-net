@@ -31,7 +31,7 @@ jobs:
           aws-region: us-east-2
 
       - name: Sync files to S3
-        run: aws s3 sync ./out s3://zendcraft.net --delete
+        run: aws s3 sync ./out s3://www.zendcraft.net --delete
 
       - name: Invalidate CloudFront cache
         run: |
