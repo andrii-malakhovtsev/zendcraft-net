@@ -2,36 +2,38 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import styles from './Header.module.css';
 
-const Header = () => {
+export default function Header() {
   const pathname = usePathname();
 
-  const linkStyle = (path) => ({
-    margin: '0 1rem',
-    color: pathname === path ? '#ffd700' : 'white',
-    textDecoration: 'none',
-    fontWeight: pathname === path ? 'bold' : 'normal',
-  });
+  // Normalize pathname to avoid trailing slash issues
+  const cleanPathname = pathname.endsWith('/') && pathname !== '/' ? pathname.slice(0, -1) : pathname;
 
   return (
-    <header
-      style={{
-        backgroundImage: `url("/background.png")`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        color: 'white',
-        padding: '3rem 1rem',
-        textAlign: 'center',
-        textShadow: '2px 2px 4px #000',
-      }}
-    >
-      <nav style={{ marginTop: '1rem' }}>
-        <Link href="/" style={linkStyle('/')}>Main</Link>
-        <Link href="/bedrock" style={linkStyle('/bedrock')}>Bedrock</Link>
-        <Link href="/java" style={linkStyle('/java')}>Java</Link>
+    <header className={styles.header}>
+      <img src="/title.png" alt="ZendCraft.net" className={styles.titleImage} />
+
+      <nav className={styles.nav}>
+        <Link
+          href="/"
+          className={`${styles.navLink} ${cleanPathname === '/' ? styles.navLinkActive : ''}`}
+        >
+          Main
+        </Link>
+        <Link
+          href="/bedrock"
+          className={`${styles.navLink} ${cleanPathname === '/bedrock' ? styles.navLinkActive : ''}`}
+        >
+          Bedrock
+        </Link>
+        <Link
+          href="/java"
+          className={`${styles.navLink} ${cleanPathname === '/java' ? styles.navLinkActive : ''}`}
+        >
+          Java
+        </Link>
       </nav>
     </header>
   );
-};
-
-export default Header;
+}
