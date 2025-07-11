@@ -10,7 +10,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --link-color: #a3d900;
+  --link-color: #a0c3ff;
   --link-hover: underline;
 }
 
@@ -62,4 +62,11 @@ a {
 
 a:hover {
   text-decoration: var(--link-hover);
+}
+
+/* Bold Text */
+
+strong,
+b {
+  color: #ffd700;
 }
