@@ -28,10 +28,16 @@ export default function Header() {
           Bedrock
         </Link>
         <Link
+          href="/java-og"
+          className={`${styles.navLink} ${cleanPathname === '/java-og' ? styles.navLinkActive : ''}`}
+        >
+          Java OG
+        </Link>
+        <Link
           href="/java"
           className={`${styles.navLink} ${cleanPathname === '/java' ? styles.navLinkActive : ''}`}
         >
-          Java
+          Java Creative
         </Link>
       </nav>
     </header>
