@@ -4,11 +4,9 @@ export default function BedrockPage() {
       <h2>Bedrock Edition</h2>
       <br></br>
       <p>This is the main <b>SURVIVAL</b> server</p>
-      <ul>
-        <li>Achievements: <b>ON</b></li>
-        <li>Show Coordinates: <b>ON</b></li>
-        <li>Difficulty: <b>EASY</b></li>
-      </ul>
+      <p>Achievements: <b>ON</b></p>
+      <p>Show Coordinates: <b>ON</b></p> 
+      <p>Difficulty: <b>EASY</b></p>
       <br></br>
       <p>
         <u>Reason:</u> The only version of Minecraft constantly updated

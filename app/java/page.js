@@ -6,6 +6,7 @@ export default function JavaPage() {
       <p><i><b>Coming in the future...</b></i></p>
       <br></br>
       <p>Planned to be based on my old city map: </p>
+      <br></br>
       <div class="shorts-wrapper">
       <div class="short-container">
         <iframe 
