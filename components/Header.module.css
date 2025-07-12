@@ -37,8 +37,11 @@
   font-weight: bold;
 }
 
-.active {
-  color: yellow;
-  text-decoration: underline;
+/* Phone Support */
+@media (max-width: 600px) {
+  .navLink {
+     margin: 0.5rem;
+     margin-top: 0;
+     font-size: 0.8rem;
+  }
 }
-

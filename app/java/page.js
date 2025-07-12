@@ -10,7 +10,8 @@ export default function JavaPage() {
       <div class="shorts-wrapper">
       <div class="short-container">
         <iframe 
-          src="https://www.youtube.com/embed/c3YCBiGu02E" 
+          src="https://www.youtube.com/embed/c3YCBiGu02E"
+          frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
           allowFullScreen>
         </iframe>
