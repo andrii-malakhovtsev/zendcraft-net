@@ -8,7 +8,6 @@ export default function Header() {
   const pathname = usePathname();
   const cleanPathname = pathname.endsWith('/') && pathname !== '/' ? pathname.slice(0, -1) : pathname;
 
-  // Background images for each route
   const backgroundImages = {
     '/': 'url("/header-images/home.jpg")',
     '/bedrock': 'url("/header-images/bedrock.jpg")',
@@ -16,7 +15,6 @@ export default function Header() {
     '/java': 'url("/header-images/java-creative.png")',
   };
 
-  // Fallback background image
   const backgroundImage = backgroundImages[cleanPathname] || 'url("/header-images/logo.png")';
 
   return (

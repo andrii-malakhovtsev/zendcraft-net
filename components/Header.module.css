@@ -39,6 +39,15 @@
 
 /* Phone Support */
 @media (max-width: 500px) {
+  .header {
+    padding: 2rem 0.5rem;
+    text-align: center;
+  }
+
+  .titleImage {
+    max-width: 20rem;
+  }
+
   .navLink {
      margin: 0.5rem;
      margin-top: 0;
