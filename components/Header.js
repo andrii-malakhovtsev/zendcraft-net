@@ -10,9 +10,9 @@ export default function Header() {
 
   // Background images for each route
   const backgroundImages = {
-    '/': 'url("/header-images/home.png")',
+    '/': 'url("/header-images/home.jpg")',
     '/bedrock': 'url("/header-images/bedrock.jpg")',
-    '/java-og': 'url("/header-images/java-og.jpg")',
+    '/java-og': 'url("/header-images/java-og.png")',
     '/java': 'url("/header-images/java-creative.png")',
   };
 
