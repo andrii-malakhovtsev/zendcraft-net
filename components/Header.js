@@ -6,14 +6,26 @@ import styles from './Header.module.css';
 
 export default function Header() {
   const pathname = usePathname();
-
-  // Normalize pathname to avoid trailing slash issues
   const cleanPathname = pathname.endsWith('/') && pathname !== '/' ? pathname.slice(0, -1) : pathname;
 
+  // Background images for each route
+  const backgroundImages = {
+    '/': 'url("/header-images/home.png")',
+    '/bedrock': 'url("/header-images/bedrock.jpg")',
+    '/java-og': 'url("/header-images/java-og.jpg")',
+    '/java': 'url("/header-images/java-creative.png")',
+  };
+
+  // Fallback background image
+  const backgroundImage = backgroundImages[cleanPathname] || 'url("/header-images/logo.png")';
+
   return (
-    <header className={styles.header}>
+    <header
+      className={styles.header}
+      style={{ backgroundImage, backgroundSize: 'cover', backgroundPosition: 'center' }}
+    >
       <Link href="/" className={styles.titleImageLink}>
-        <img src="/title.png" alt="ZendCraft.net" className={styles.titleImage} />
+        <img src="/header-images/logo.png" alt="ZendCraft.net" className={styles.titleImage} />
       </Link>
 
       <nav className={styles.nav}>
