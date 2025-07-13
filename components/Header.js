@@ -12,15 +12,11 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
-      <img src="/title.png" alt="ZendCraft.net" className={styles.titleImage} />
+      <Link href="/" className={styles.titleImageLink}>
+        <img src="/title.png" alt="ZendCraft.net" className={styles.titleImage} />
+      </Link>
 
       <nav className={styles.nav}>
-        <Link
-          href="/"
-          className={`${styles.navLink} ${cleanPathname === '/' ? styles.navLinkActive : ''}`}
-        >
-          Main
-        </Link>
         <Link
           href="/bedrock"
           className={`${styles.navLink} ${cleanPathname === '/bedrock' ? styles.navLinkActive : ''}`}
