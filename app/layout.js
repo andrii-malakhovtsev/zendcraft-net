@@ -1,5 +1,6 @@
 import './globals.css';
-import Header from '../components/Header';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer'
 
 export const metadata = {
   title: 'ZendCraft',
@@ -9,9 +10,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className="layout">
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
