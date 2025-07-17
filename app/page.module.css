@@ -127,6 +127,11 @@ a.secondary {
 }
 
 @media (max-width: 600px) {
+  u {
+    text-underline-offset: -4px;
+    text-decoration-thickness: 2px;
+  }
+
   .page {
     padding: 32px;
     padding-bottom: 80px;
