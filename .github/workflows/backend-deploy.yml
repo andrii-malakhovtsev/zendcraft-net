@@ -29,8 +29,17 @@ jobs:
         run: ssh-keyscan -H ${{ secrets.EC2_HOST }} >> $HOME/.ssh/known_hosts
 
       - name: Check SSH key size (debug)
-        run: echo "Key size: $(echo "${{ secrets.EC2_SSH_KEY }}" | wc -c)"
+        env:
+            EC2_SSH_KEY: ${{ secrets.EC2_SSH_KEY }}
+        run: |
+            echo "Key size: $(echo \"$EC2_SSH_KEY\" | wc -c)"
 
       - name: Deploy backend to EC2
         run: |
-          rsync -avz -e "ssh -i $HOME/.ssh/id_rsa -o StrictHostKeyChecking=no" ./backend/ ${{ se_
+          rsync -avz -e "ssh -i $HOME/.ssh/id_rsa -o StrictHostKeyChecking=no" ./backend/ ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:/home/${{ secrets.EC2_USER }}/backend/
+          ssh -i $HOME/.ssh/id_rsa -o StrictHostKeyChecking=no ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} << 'EOF'
+            cd ~/backend
+            npm install --omit=dev
+            npm run build
+            pm2 reload backend || pm2 start npm --name "backend" -- start
+          EOF
