@@ -1,0 +1,23 @@
+.shorts-wrapper {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.short-container {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 9 / 16;
+}
+
+.short-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
