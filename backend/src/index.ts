@@ -11,6 +11,7 @@ app.use(cors({
   origin: [
     'http://localhost:3000',
     'https://www.zendcraft.net',
+    'https://zendcraft.net'
   ],
 }));
 
