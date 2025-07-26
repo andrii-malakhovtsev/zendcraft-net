@@ -13,7 +13,8 @@ export default function BedrockPage() {
 
   async function fetchStatus() {
     try {
-      const response = await fetch(`http://localhost:4000/api/bedrock-server-status/`);
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+      const response = await fetch(`${apiUrl}/api/java-server-status`);
       const data = await response.json();
       setStatus(data);
     } catch {

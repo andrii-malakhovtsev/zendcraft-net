@@ -7,4 +7,5 @@ out/
 
 # Misc
 .DS_Store
-.env
+*.env
+*.env.local
