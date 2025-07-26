@@ -1,9 +1,12 @@
-name: Deploy to S3
+name: Deploy Frontend to S3
 
 on:
   push:
     branches:
       - main
+    paths:
+      - 'frontend/**'   # Only run when frontend files change
+      - '.github/workflows/frontend-deploy.yml'
 
 jobs:
   deploy:
@@ -17,13 +20,15 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Install dependencies
+      - name: Install frontend dependencies
+        working-directory: frontend
         run: npm install
 
       - name: Build and export
+        working-directory: frontend
         run: npm run deploy
 
-      - name: Deploy to S3
+      - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v2
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
@@ -31,11 +36,8 @@ jobs:
           aws-region: us-east-2
 
       - name: Sync files to S3
-        run: aws s3 sync ./out s3://www.zendcraft.net --delete
+        run: aws s3 sync frontend/out s3://www.zendcraft.net --delete
 
       - name: Invalidate CloudFront cache
         run: |
           aws cloudfront create-invalidation --distribution-id E1S67IML931NSV --paths "/*"
-
-
-
