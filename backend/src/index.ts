@@ -1,5 +1,3 @@
-'use client';
-
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
@@ -10,10 +8,13 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: [
+    'http://localhost:3000',
+    'https://www.zendcraft.net',
+  ],
 }));
 
-const PORT = process.env.PORT || 3000;
+const PORT = Number(process.env.PORT) || 3000;
 
 const JAVA_SERVER_IP = process.env.JAVA_SERVER_HOST || 'localhost';
 const JAVA_SERVER_PORT = parseInt(process.env.JAVA_SERVER_PORT || '25565');
@@ -62,6 +63,6 @@ app.get('/api/bedrock-server-status', async (_req, res) => {
   }
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`API server listening on port ${PORT}`);
 });
