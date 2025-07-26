@@ -14,7 +14,7 @@ export default function BedrockPage() {
   async function fetchStatus() {
     try {
       const apiUrl = process.env.NEXT_PUBLIC_API_URL;
-      const response = await fetch(`${apiUrl}/api/java-server-status`);
+      const response = await fetch(`${apiUrl}/api/bedrock-server-status`);
       const data = await response.json();
       setStatus(data);
     } catch {
