@@ -22,12 +22,12 @@ jobs:
 
       - name: Install frontend dependencies
         working-directory: frontend
-        env: 
-          NEXT_PUBLIC_API_URL: ${{ secrets.NEXT_PUBLIC_API_URL }}
         run: npm install
 
       - name: Build and export
         working-directory: frontend
+        env: 
+          NEXT_PUBLIC_API_URL: ${{ secrets.NEXT_PUBLIC_API_URL }}
         run: npm run deploy
 
       - name: Configure AWS Credentials
