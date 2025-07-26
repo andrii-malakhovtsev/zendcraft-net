@@ -16,6 +16,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Create version.txt with current commit SHA
+        run: echo "${{ github.sha }}" > ./backend/version.txt
+
       - name: Make SSH directory
         run: mkdir -p $HOME/.ssh
 
