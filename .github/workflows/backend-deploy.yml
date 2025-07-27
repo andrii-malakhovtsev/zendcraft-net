@@ -26,7 +26,7 @@ jobs:
         run: echo "${{ secrets.EC2_SSH_KEY }}" > $HOME/.ssh/id_rsa
 
       - name: Fix SSH key permissions
-        run: chmod 600 $HOME/.ssh/id_rsa
+        run: chmod 600 $HOME/.ssh/id_rsav
 
       - name: Add EC2 host to known_hosts
         run: ssh-keyscan -H ${{ secrets.EC2_HOST }} >> $HOME/.ssh/known_hosts

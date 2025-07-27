@@ -34,21 +34,21 @@ export default function JavaPage() {
     <main style={{ padding: '2rem', textAlign: 'center' }}>
       <h2>Java Edition: OG Survival</h2>
       <br />
+      <p>This is the main <b>NOSTALGIA</b> server</p>
+      <br />
       {loading ? (
         <p><span style={{ color: 'lightblue' }}>Loading server status...</span></p>
       ) : status?.online ? (
-        <h3>
-          Server is <span style={{ color: 'yellowgreen' }}>Online</span>
+        <p>
+          Status: <b><span style={{ color: 'yellowgreen' }}>Online</span></b>
           <br />
-          Players online: <span style={{ color: 'yellowgreen' }}>{status.playerCount}</span>
-        </h3>
+          Players online: <b><span style={{ color: 'yellowgreen' }}>{status.playerCount}</span></b>
+        </p>
       ) : (
-        <h3 style={{ color: 'orange' }}>Server is Offline</h3>
+        <p>Status: <span style={{ color: 'darkorange' }}>Offline</span></p>
       )}
-      <br />
-      <h3>Version 1.5.2</h3>
-      <br />
-      <p>This is the main <b>NOSTALGIA</b> server</p>
+      <p>Region: <b>Germany</b></p>
+      <p>Version: <b>1.5.2</b></p>
       <p>Difficulty: <b>NORMAL</b></p>
       <br />
       <p>

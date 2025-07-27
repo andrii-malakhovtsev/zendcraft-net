@@ -33,20 +33,21 @@ export default function BedrockPage() {
   return (
     <main style={{ padding: '2rem', textAlign: 'center' }}>
       <h2>Bedrock Edition</h2>
-      <br />
+      <br></br>
+      <p>This is the main <b>SURVIVAL</b> server</p>
+      <br></br>
       {loading ? (
         <p><span style={{ color: 'lightblue' }}>Loading server status...</span></p>
       ) : status?.online ? (
-        <h3>
-          Server is <span style={{ color: 'yellowgreen' }}>Online</span>
+        <p>
+          Status: <b><span style={{ color: 'yellowgreen' }}>Online</span></b>
           <br />
-          Players online: <span style={{ color: 'yellowgreen' }}>{status.playerCount}</span>
-        </h3>
+          Players online: <b><span style={{ color: 'yellowgreen' }}>{status.playerCount}</span></b>
+        </p>
       ) : (
-        <h3 style={{ color: 'orange' }}>Server is Offline</h3>
+        <p>Status: <span style={{ color: 'darkorange' }}>Offline</span></p>
       )}
-      <br />
-      <p>This is the main <b>SURVIVAL</b> server</p>
+      <p>Region: <b>US-east</b></p>
       <p>Achievements: <b>ON</b></p>
       <p>Show Coordinates: <b>ON</b></p> 
       <p>Difficulty: <b>EASY</b></p>
