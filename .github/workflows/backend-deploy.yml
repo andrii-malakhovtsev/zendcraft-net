@@ -44,5 +44,6 @@ jobs:
             cd ~/backend
             npm install --omit=dev
             npm run build
-            pm2 reload backend || pm2 start npm --name "backend" -- start
+            pm2 delete backend || true
+            pm2 start npm --name backend -- start
           EOF
