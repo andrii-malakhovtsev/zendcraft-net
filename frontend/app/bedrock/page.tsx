@@ -42,7 +42,11 @@ export default function BedrockPage() {
         <p>
           Status: <b><span style={{ color: 'yellowgreen' }}>Online</span></b>
           <br />
-          Players online: <b><span style={{ color: 'yellowgreen' }}>{status.playerCount}</span></b>
+          Players online: <b>
+            <span style={{ color: status.playerCount > 0 ? 'yellowgreen' : 'darkorange' }}>
+              {status.playerCount}
+            </span>
+          </b>
         </p>
       ) : (
         <p>Status: <span style={{ color: 'darkorange' }}>Offline</span></p>
