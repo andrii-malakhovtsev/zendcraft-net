@@ -1,7 +1,3 @@
-.server-status {
-  margin: 0;
-}
-
 .status-group {
   display: inline-flex;
   align-items: center;
@@ -9,27 +5,25 @@
   line-height: 1;
 }
 
+.lamp-icon {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  flex-shrink: 0;
+  position: relative;
+  top: 1px;
+}
+
 .status-text {
   font-weight: bold;
-  line-height: 1;
+  font-size: 16px;
 }
 
 .status-text.online {
   color: yellowgreen;
 }
 
-.status-text.offline {
-  color: darkorange;
-}
-
+.status-text.offline,
 .status-loading {
   color: darkorange;
-}
-
-.lamp-icon {
-  display: block;
-  width: 20px;
-  height: 20px;
-  position: relative;
-  top: -6px;
 }
