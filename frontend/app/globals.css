@@ -47,6 +47,10 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+img {
+  box-shadow: 1px 1px 0 #000;
+}
+
 body.layout {
   display: flex;
   flex-direction: column;
