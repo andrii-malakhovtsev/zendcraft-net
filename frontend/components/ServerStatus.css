@@ -6,11 +6,12 @@
   display: inline-flex;
   align-items: center;
   gap: 5px;
+  line-height: 1;
 }
 
 .status-text {
   font-weight: bold;
-
+  line-height: 1;
 }
 
 .status-text.online {
@@ -26,9 +27,9 @@
 }
 
 .lamp-icon {
+  display: block;
   width: 20px;
-  margin: 0;
-  padding: 0;
+  height: 20px;
   position: relative;
-  top: 0px;
+  top: -6px;
 }
