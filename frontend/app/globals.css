@@ -47,7 +47,7 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-img {
+p img {
   box-shadow: 1px 1px 0 #000;
 }
 
