@@ -1,0 +1,34 @@
+.server-status {
+  margin: 0;
+}
+
+.status-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.status-text {
+  font-weight: bold;
+
+}
+
+.status-text.online {
+  color: yellowgreen;
+}
+
+.status-text.offline {
+  color: darkorange;
+}
+
+.status-loading {
+  color: darkorange;
+}
+
+.lamp-icon {
+  width: 20px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 0px;
+}

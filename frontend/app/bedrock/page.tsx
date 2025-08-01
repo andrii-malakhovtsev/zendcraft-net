@@ -2,6 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 
+import ServerStatus from '../../components/ServerStatus';
+
 type ServerStatus = {
   online: boolean;
   playerCount: number;
@@ -36,37 +38,7 @@ export default function BedrockPage() {
       <br></br>
       <p>This is the main <b>SURVIVAL</b> server</p>
       <br></br>
-
-      
-      {loading ? (
-        <p><span style={{ color: 'lightblue' }}>Loading server status...</span></p>
-      ) : (
-        <p>
-          Status: <b>
-            
-            <span style={{ color: status?.online ? 'yellowgreen' : 'darkorange',
-               marginRight: '5px' }}>
-              {status?.online ? 'Online' : 'Offline'}
-            </span>
-            <img
-              src={status?.online ? '/lamp-on.png' : '/lamp-off.png'}
-              alt={status?.online ? 'Online' : 'Offline'}
-              style={{ width: '22px', top: '-6px', position: 'relative' }}
-            />
-          </b>
-          {status?.online && (
-            <>
-              <br />
-              Players online: <b>
-                <span style={{ color: status.playerCount > 0 ? 'yellowgreen' : 'darkorange' }}>
-                  {status.playerCount}
-                </span>
-              </b>
-            </>
-          )}
-        </p>
-      )}
-
+      <ServerStatus loading={loading} status={status} showPlayers={true} />
       <p>Region: <b>US-east</b></p>
       <p>Achievements: <b>ON</b></p>
       <p>Show Coordinates: <b>ON</b></p> 
