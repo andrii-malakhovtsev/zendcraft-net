@@ -6,17 +6,16 @@
 }
 
 .lamp-icon {
-  width: 20px;
-  height: 20px;
+  width: 19px;
+  height: 19px;
   display: inline-block;
   flex-shrink: 0;
   position: relative;
-  top: 1px;
+  top: 0;
 }
 
 .status-text {
   font-weight: bold;
-  font-size: 16px;
 }
 
 .status-text.online {
