@@ -44,7 +44,7 @@ export default function JavaPage() {
       <p>Difficulty: <b>NORMAL</b></p>
       <br />
       <p>
-        <u>Reason: </u>Was selected to be of the first and most nostalgic versions among most friends
+        <u>Reason</u>: Was selected to be of the first and most nostalgic versions among most friends
       </p>
       <br />
       <p>

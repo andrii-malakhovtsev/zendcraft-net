@@ -45,7 +45,7 @@ export default function BedrockPage() {
       <p>Difficulty: <b>EASY</b></p>
       <br />
       <p>
-        <u>Reason:</u> The only version of Minecraft constantly updated to newest versions
+        <u>Reason</u>: The only version of Minecraft constantly updated to newest versions
         <br />
         and available on all platforms at the same time
       </p>
