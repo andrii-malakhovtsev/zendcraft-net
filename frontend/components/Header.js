@@ -10,7 +10,7 @@ export default function Header() {
 
   const backgroundImages = {
     '/': 'url("/header-images/home.jpg")',
-    '/bedrock': 'url("/header-images/bedrock.jpg")',
+    '/bedrock': 'url("/header-images/bedrock.png")',
     '/java-og': 'url("/header-images/java-og.png")',
     '/java': 'url("/header-images/java-creative.png")',
   };
