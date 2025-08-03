@@ -53,7 +53,7 @@ html, body {
 
 p {
   font-size: 16px;
-  margin-bottom: 0.5rem;
+  line-height: 1.5;
 }
 
 p img {
@@ -95,4 +95,11 @@ a:hover {
 strong,
 b {
   color: #ffd700;
+}
+
+@media (max-width: 600px)
+{
+  p {
+    font-size: 110%;
+  }
 }

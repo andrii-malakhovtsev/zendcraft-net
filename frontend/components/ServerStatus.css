@@ -1,8 +1,7 @@
 .status-group {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  line-height: 1;
+  gap: 8px;
 }
 
 .lamp-icon {
@@ -11,11 +10,11 @@
   display: inline-block;
   flex-shrink: 0;
   position: relative;
-  top: 0;
 }
 
 .status-text {
   font-weight: bold;
+  font-size: 17px;
 }
 
 .status-text.online {
