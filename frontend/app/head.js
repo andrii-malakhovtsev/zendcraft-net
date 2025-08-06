@@ -1,6 +1,19 @@
 export default function Head() {
   return (
     <>
+      <title>ZendCraft</title>
+      <meta name="description" content="Your next door Minecraft Bedrock and Java Servers." />
+      <meta name="keywords" content="minecraft, minecraft server, server, zendcraft" />
+      <meta name="author" content="ZendCraft.net" />
+
+      {/* Open Graph tags */}
+      <meta property="og:title" content="ZendCraft.net" />
+      <meta property="og:description" content="Your neighborhood Minecraft Bedrock and Java Servers for Whitelisted friends." />
+      <meta property="og:image" content="https://zendcraft.net/social-preview.png" />
+      <meta property="og:url" content="https://zendcraft.net" />
+      <meta property="og:type" content="website" />
+
+      {/* Favicons */}
       <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
       <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
       <link rel="shortcut icon" href="/favicon/favicon.ico" />
