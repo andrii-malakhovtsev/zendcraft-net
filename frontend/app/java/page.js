@@ -1,4 +1,5 @@
 import YouTubeShorts from '../../components/YouTubeShorts';
+import Flag from '../../components/Flag';
 
 export default function JavaPage() {
   return (
@@ -7,7 +8,7 @@ export default function JavaPage() {
       <br></br>
       <p><i><b>Coming in the future...</b></i></p>
       <br></br>
-      <p>Region: <b>US-east</b></p>
+      <p>Region: <b>US East <Flag.US /></b></p>
       <br></br>
       <p>Planned to be based on my old city map: </p>
       <br></br>

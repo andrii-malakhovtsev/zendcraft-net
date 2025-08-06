@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 
+import Flag from '../../components/Flag';
 import ServerStatus from '../../components/ServerStatus';
 
 type ServerStatus = {
@@ -39,7 +40,7 @@ export default function BedrockPage() {
       <p>This is the main <b>SURVIVAL</b> server</p>
       <br></br>
       <ServerStatus loading={loading} status={status} showPlayers={true} />
-      <p>Region: <b>US-east</b></p>
+      <p>Region: <b>US East <Flag.US /></b></p>
       <p>Achievements: <b>ON</b></p>
       <p>Show Coordinates: <b>ON</b></p> 
       <p>Difficulty: <b>EASY</b></p>

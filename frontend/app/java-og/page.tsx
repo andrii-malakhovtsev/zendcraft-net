@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 
+import Flag from '../../components/Flag';
 import ServerStatus from '../../components/ServerStatus';
 
 type ServerStatus = {
@@ -39,7 +40,7 @@ export default function JavaPage() {
       <p>This is the main <b>NOSTALGIA</b> server</p>
       <br />
       <ServerStatus loading={loading} status={status} showPlayers={true} />
-      <p>Region: <b>Germany</b></p>
+      <p>Region: <b>Germany</b> <Flag.DE /></p>
       <p>Version: <b>1.5.2</b></p>
       <p>Difficulty: <b>NORMAL</b></p>
       <br />

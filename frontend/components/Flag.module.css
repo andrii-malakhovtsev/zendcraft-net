@@ -1,0 +1,8 @@
+.flagImage {
+  width: 22px;
+  height: 14px;
+  position: relative;
+  display: inline-block;
+  top: -1px;
+  vertical-align: middle;
+}
