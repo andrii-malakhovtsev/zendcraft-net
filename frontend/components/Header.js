@@ -28,22 +28,22 @@ export default function Header() {
 
       <nav className={styles.nav}>
         <Link
-          href="/bedrock"
-          className={`${styles.navLink} ${cleanPathname === '/bedrock' ? styles.navLinkActive : ''}`}
-        >
-          Bedrock
-        </Link>
-        <Link
           href="/java-og"
           className={`${styles.navLink} ${cleanPathname === '/java-og' ? styles.navLinkActive : ''}`}
         >
-          Java OG
+          Classic
         </Link>
         <Link
           href="/java"
           className={`${styles.navLink} ${cleanPathname === '/java' ? styles.navLinkActive : ''}`}
         >
-          Java Creative
+          Creative
+        </Link>
+        <Link
+          href="/bedrock"
+          className={`${styles.navLink} ${cleanPathname === '/bedrock' ? styles.navLinkActive : ''}`}
+        >
+          Bedrock
         </Link>
       </nav>
     </header>
