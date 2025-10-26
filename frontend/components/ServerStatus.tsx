@@ -6,6 +6,7 @@ interface ServerStatusProps {
   status?: {
     online: boolean
     playerCount: number
+    paused?: boolean
   }
   showPlayers?: boolean
 }
@@ -17,24 +18,40 @@ const ServerStatus: React.FC<ServerStatusProps> = ({ loading, status, showPlayer
     )
   }
 
+  const isPaused = status?.paused ?? false
   const isOnline = status?.online ?? false
   const playerCount = status?.playerCount ?? 0
+
+  let statusText = 'Offline'
+  let statusClass = 'offline'
+  let lampIcon = '/lamp-off.png'
+  let lampAlt = 'Offline'
+
+  if (isPaused) {
+    statusText = 'Paused'
+    statusClass = 'offline' // same styling as offline
+    lampIcon = '/lamp-off.png'
+    lampAlt = 'Paused'
+  } else if (isOnline) {
+    statusText = 'Online'
+    statusClass = 'online'
+    lampIcon = '/lamp-on.png'
+    lampAlt = 'Online'
+  }
 
   return (
     <p className="server-status">
       Status:{' '}
       <span className="status-group">
-        <span className={`status-text ${isOnline ? 'online' : 'offline'}`}>
-          {isOnline ? 'Online' : 'Offline'}
-        </span>
+        <span className={`status-text ${statusClass}`}>{statusText}</span>
         <img
           className="lamp-icon"
-          src={isOnline ? '/lamp-on.png' : '/lamp-off.png'}
-          alt={isOnline ? 'Online' : 'Offline'}
+          src={lampIcon}
+          alt={lampAlt}
         />
       </span>
 
-      {isOnline && showPlayers && (
+      {isOnline && !isPaused && showPlayers && (
         <>
           <br />
           Players online:{' '}
