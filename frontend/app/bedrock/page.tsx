@@ -38,12 +38,22 @@ export default function BedrockPage() {
       <h2>Bedrock Edition</h2>
       <br></br>
       <p>This is the main <b>SURVIVAL</b> server</p>
+      <br />
+      <p className="pause-reason">
+        Reason for pause: Switched to Realm and moved server computer resources<br></br>
+         for <b>CREATIVE</b> server. All the logic is being left for future revival.
+      </p>
       <br></br>
-      <ServerStatus loading={loading} status={status} showPlayers={true} />
+      <ServerStatus
+        loading={false}
+        status={{ online: false, paused: true, playerCount: 0 }}
+      />
       <p>Region: <b>US East <Flag.US /></b></p>
       <p>Achievements: <b>ON</b></p>
       <p>Show Coordinates: <b>ON</b></p> 
       <p>Difficulty: <b>EASY</b></p>
+      <br />
+      
       <br />
       <p>
         <u>Reason</u>: The only version of Minecraft constantly updated to newest versions
@@ -51,14 +61,6 @@ export default function BedrockPage() {
         and available on all platforms at the same time
       </p>
       <br />
-      <p>
-        Instructions to join are on{' '}
-        <strong>
-          <a href="https://discord.gg/McyvbNsrED" target="_blank" rel="noreferrer">
-            Discord
-          </a>
-        </strong>
-      </p>
     </main>
   );
 }
