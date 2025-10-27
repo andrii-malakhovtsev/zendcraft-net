@@ -14,7 +14,12 @@ interface ServerStatusProps {
 const ServerStatus: React.FC<ServerStatusProps> = ({ loading, status, showPlayers = true }) => {
   if (loading) {
     return (
-      <p><span className="status-loading">Loading server status...</span></p>
+      <p className="server-status">
+        Status:{' '}
+        <span className="status-group">
+          <span className="status-text loading">Loading...</span>
+        </span>
+      </p>
     )
   }
 

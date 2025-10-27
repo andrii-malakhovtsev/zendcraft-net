@@ -22,11 +22,7 @@
 }
 
 .status-text.offline,
-.status-loading {
+.pause-reason,
+.status-text.loading {
   color: darkorange;
 }
-
-.pause-reason {
-  color: darkorange;
-}
-
