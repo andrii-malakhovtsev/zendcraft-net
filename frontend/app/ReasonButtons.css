@@ -1,0 +1,22 @@
+.server-main {
+  padding: 2rem;
+  text-align: center;
+}
+
+.server-reason {
+  margin-top: 1rem;
+  transition: opacity 0.3s ease-in-out;
+  animation: fadeIn 0.3s ease forwards;
+  text-shadow: inherit;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-3px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

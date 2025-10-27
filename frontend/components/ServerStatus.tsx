@@ -29,7 +29,7 @@ const ServerStatus: React.FC<ServerStatusProps> = ({ loading, status, showPlayer
 
   if (isPaused) {
     statusText = 'Paused'
-    statusClass = 'offline' // same styling as offline
+    statusClass = 'offline'
     lampIcon = '/lamp-off.png'
     lampAlt = 'Paused'
   } else if (isOnline) {

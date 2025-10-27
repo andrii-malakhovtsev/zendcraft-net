@@ -12,6 +12,7 @@
   --foreground: #171717;
   --link-color: #a0c3ff;
   --link-hover: underline;
+  --bold: #ffd700;
 }
 
 /* Dark mode overrides */
@@ -94,7 +95,7 @@ a:hover {
 
 strong,
 b {
-  color: #ffd700;
+  color: var(--bold);
 }
 
 @media (max-width: 600px)

@@ -1,5 +1,6 @@
 import YouTubeShorts from '../../components/YouTubeShorts';
 import Flag from '../../components/Flag';
+import '../ReasonButtons.css';
 
 export default function JavaPage() {
   return (

@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 
 import Flag from '../../components/Flag';
 import ServerStatus from '../../components/ServerStatus';
+import '../ReasonButtons.css';
 
 type ServerStatus = {
   online: boolean;
@@ -13,6 +14,7 @@ type ServerStatus = {
 export default function BedrockPage() {
   const [status, setStatus] = useState<ServerStatus | null>(null);
   const [loading, setLoading] = useState(true);
+  const [showReason, setShowReason] = useState(false);
 
   async function fetchStatus() {
     try {
@@ -37,13 +39,23 @@ export default function BedrockPage() {
     <main style={{ padding: '2rem', textAlign: 'center' }}>
       <h2>Bedrock Edition</h2>
       <br></br>
-      <p>This is the main <b>SURVIVAL</b> server</p>
-      <br />
-      <p className="pause-reason">
-        Reason for pause: Switched to Realm and moved server computer resources<br></br>
-         for <b>CREATIVE</b> server. All the logic is being left for future revival.
+      <p>
+        This is the main{' '}
+        <a
+          href="#"
+          className="reason-link"
+          onClick={(e) => {
+            e.preventDefault();
+            setShowReason((prev) => !prev);
+          }}
+          aria-expanded={showReason}
+          aria-controls="server-reason"
+        >
+          <b>SURVIVAL</b>
+        </a>{' '}
+        server
       </p>
-      <br></br>
+      <br />
       <ServerStatus
         loading={false}
         status={{ online: false, paused: true, playerCount: 0 }}
@@ -53,13 +65,20 @@ export default function BedrockPage() {
       <p>Show Coordinates: <b>ON</b></p> 
       <p>Difficulty: <b>EASY</b></p>
       <br />
-      
-      <br />
-      <p>
-        <u>Reason</u>: The only version of Minecraft constantly updated to newest versions
+      {showReason && (
+        <p id="server-reason" className="server-reason">
+            <u>Reason</u>: The only version of Minecraft constantly updated to newest versions
+          <br />
+          and available on all platforms at the same time
+        </p>
+      )}
+
+      <p className="pause-reason">
         <br />
-        and available on all platforms at the same time
+        Reason for pause: Switched to Realm and moved server computer resources<br></br>
+         for <b>CREATIVE</b> server. All the logic is being left for future revival.
       </p>
+
       <br />
     </main>
   );
