@@ -1,5 +1,6 @@
 # Dependencies
 node_modules/
+dist/
 
 # Build output
 .next/
@@ -9,3 +10,7 @@ out/
 .DS_Store
 *.env
 *.env.local
+
+# JS compiled files
+src/**/*.js
+src/**/*.js.map

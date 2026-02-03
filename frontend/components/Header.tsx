@@ -6,9 +6,13 @@ import styles from './Header.module.css';
 
 export default function Header() {
   const pathname = usePathname();
-  const cleanPathname = pathname.endsWith('/') && pathname !== '/' ? pathname.slice(0, -1) : pathname;
+  const currentPath = pathname || '/';
+  
+  const cleanPathname = currentPath.endsWith('/') && currentPath !== '/' 
+    ? currentPath.slice(0, -1) 
+    : currentPath;
 
-  const backgroundImages = {
+  const backgroundImages: Record<string, string> = {
     '/': 'url("/header-images/home.jpg")',
     '/bedrock': 'url("/header-images/bedrock.png")',
     '/java-og': 'url("/header-images/java-og.png")',
