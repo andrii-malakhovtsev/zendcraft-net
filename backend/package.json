@@ -23,6 +23,8 @@
     "typescript": "^5.8.3"
   },
   "devDependencies": {
-    "@types/cors": "^2.8.19"
+    "@types/cors": "^2.8.19",
+    "@types/react": "^19.2.10",
+    "@types/react-dom": "^19.2.3"
   }
 }
