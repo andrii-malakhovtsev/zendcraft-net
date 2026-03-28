@@ -15,6 +15,16 @@
 
 ---
 
+## Scripts (Linux game servers)
+
+Shell automation for **production hosts** (not run via `npm` in this repo) lives under [`server/linux/`](server/linux/). Copy scripts to the server, `chmod +x`, and run there.
+
+| Path | Purpose |
+|------|---------|
+| [`server/linux/bedrock/update_bedrock.sh`](server/linux/bedrock/update_bedrock.sh) | Back up config/worlds, fetch the latest Bedrock Dedicated Server for Linux, unzip in place, restore `server.properties`. Optional: `BEDROCK_DIR=/path/to/server ./update_bedrock.sh` |
+
+---
+
 ## System Architecture
 
 1.  **Frontend:** Next.js (TypeScript) provides the UI and server-side rendering.
